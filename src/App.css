@@ -1,0 +1,10 @@
+/* App.css - gaya global */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+}
+.App {
+  padding-bottom: 100px;
+}

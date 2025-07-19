@@ -1,0 +1,118 @@
+.projects-section {
+  background: linear-gradient(to right, #996deb, #33183a);
+  min-height: 100vh;
+  padding: 60px 20px;
+  max-width: 1500px;
+  margin: auto;
+  text-align: center;
+}
+
+
+.projects-section h2 {
+  color: #000000;
+  margin-bottom: 70px;
+  margin-top: 50px;
+  font-size: 2rem;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 0 10px;
+}
+
+.project-card {
+  background-color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: left;
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  max-height: 180px;
+  object-fit: contain;
+  border-bottom: 1px solid #ddd;
+  background-color: #f9f9f9;
+  padding: 10px;
+}
+
+
+.project-card h3 {
+  margin: 15px 15px 5px;
+  font-size: 1.2rem;
+}
+
+.project-card p {
+  margin: 0 15px 15px;
+  color: #555;
+}
+
+.btn-view {
+  display: block;
+  margin: 10px 15px 15px;
+  padding: 8px 12px;
+  background-color: #0d6efd;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.btn-view:hover {
+  background-color: #0b5ed7;
+}
+
+.projects-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+  transform: scale(0.5);
+  opacity: 0;
+  transition: all 0.6s ease-out;
+}
+
+[data-aos="zoom-in"].aos-animate {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Tambahkan animasi kustom */
+@keyframes titlePop {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-10px) scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* AOS override */
+[data-aos="title-pop"] {
+  opacity: 0;
+  transform: translateY(40px) scale(0.5);
+  transition-property: transform, opacity;
+}
+
+[data-aos="title-pop"].aos-animate {
+  animation: titlePop 0.8s ease-out forwards;
+}
