@@ -2,15 +2,15 @@ import React, { useEffect, useRef, useState } from 'react';
 import './Skills.css';
 
 const skills = [
-  { name: 'HTML', icon: '/assets/tech/html.png', level: 90 },
-  { name: 'CSS', icon: '/assets/tech/css.png', level: 85 },
-  { name: 'JavaScript', icon: '/assets/tech/js.png', level: 80 },
-  { name: 'React', icon: '/assets/tech/react.png', level: 75 },
-  { name: 'Laravel', icon: '/assets/tech/laravel.png', level: 70 },
-  { name: 'PHP', icon: '/assets/tech/php.png', level: 70 },
-  { name: 'Python', icon: '/assets/tech/python.png', level: 60 },
-  { name: 'Java', icon: '/assets/tech/java.png', level: 65 },
-  { name: 'MySQL', icon: '/assets/tech/mysql.png', level: 75 },
+  { name: 'HTML', icon: `${process.env.PUBLIC_URL}/assets/tech/html.png`, level: 90 },
+  { name: 'CSS', icon: `${process.env.PUBLIC_URL}/assets/tech/css.png`, level: 85 },
+  { name: 'JavaScript', icon: `${process.env.PUBLIC_URL}/assets/tech/js.png`, level: 80 },
+  { name: 'React', icon: `${process.env.PUBLIC_URL}/assets/tech/react.png`, level: 75 },
+  { name: 'Laravel', icon: `${process.env.PUBLIC_URL}/assets/tech/laravel.png`, level: 70 },
+  { name: 'PHP', icon: `${process.env.PUBLIC_URL}/assets/tech/php.png`, level: 70 },
+  { name: 'Python', icon: `${process.env.PUBLIC_URL}/assets/tech/python.png`, level: 60 },
+  { name: 'Java', icon: `${process.env.PUBLIC_URL}/assets/tech/java.png`, level: 65 },
+  { name: 'MySQL', icon: `${process.env.PUBLIC_URL}/assets/tech/mysql.png`, level: 75 },
 ];
 
 function Skills() {

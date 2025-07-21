@@ -78,7 +78,7 @@ function Home() {
         <div className="home-left">
           <img
             ref={profileImgRef}
-            src="/assets/profile.jpg"
+            src={`${process.env.PUBLIC_URL}/assets/profile.jpg`}
             alt="Profil"
             className="profile-img"
           />

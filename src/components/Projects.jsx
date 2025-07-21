@@ -13,7 +13,7 @@ function Projects() {
       <h2 className="projects-title" data-aos="title-pop">Proyek Saya</h2>
       <div className="projects-container">
         <div className="project-card" data-aos="fade-up">
-          <img src="/assets/project1.jpg" alt="Proyek 1" />
+          <img src={`${process.env.PUBLIC_URL}/assets/project1.jpg`} alt="Proyek 1" />
           <h3>Website Sekolah</h3>
           <p>Website untuk sistem informasi sekolah berbasis Laravel + MySQL.</p>
           <a
@@ -27,7 +27,7 @@ function Projects() {
         </div>
 
         <div className="project-card" data-aos="fade-up" data-aos-delay="100">
-          <img src="/assets/project2.jpg" alt="Proyek 2" />
+          <img src={`${process.env.PUBLIC_URL}/assets/project2.jpg`} alt="Proyek 2" />
           <h3>Portofolio Pribadi</h3>
           <p>Portofolio ini dibuat menggunakan React.js dan custom CSS.</p>
           <a
@@ -41,7 +41,7 @@ function Projects() {
         </div>
 
         <div className="project-card" data-aos="fade-up" data-aos-delay="200">
-          <img src="/assets/project3.jpg" alt="Proyek 3" />
+          <img src={`${process.env.PUBLIC_URL}/assets/project3.jpg`} alt="Proyek 3" />
           <h3>Aplikasi CRUD Mahasiswa</h3>
           <p>Aplikasi CRUD data mahasiswa dengan Laravel dan Bootstrap 5.</p>
           <a

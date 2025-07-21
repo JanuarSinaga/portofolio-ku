@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from 'react';
 import './About.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Tilt from 'react-parallax-tilt';
 
 function About() {
   const [typedText, setTypedText] = useState('');
@@ -13,10 +12,8 @@ function About() {
   const techTitleFull = 'Teknologi yang Saya Gunakan';
 
   const aboutRef = useRef(null);
-
   const descIntervalRef = useRef(null);
   const descIndexRef = useRef(0);
-
   const techIntervalRef = useRef(null);
   const techIndexRef = useRef(0);
 
@@ -35,7 +32,6 @@ function About() {
         descIntervalRef.current = null;
         return;
       }
-
       const nextChar = fullText[descIndexRef.current];
       if (nextChar !== undefined) {
         setTypedText((prev) => prev + nextChar);
@@ -55,7 +51,6 @@ function About() {
         techIntervalRef.current = null;
         return;
       }
-
       const nextChar = techTitleFull[techIndexRef.current];
       if (nextChar !== undefined) {
         setTypedTechTitle((prev) => prev + nextChar);
@@ -92,17 +87,9 @@ function About() {
 
   return (
     <section id="about" className="about-section" ref={aboutRef}>
-    <div className="about-container">
-      
-      {/* BAGIAN KIRI - TEXT */}
-      <Tilt
-        glareEnable={true}
-        glareMaxOpacity={0.25}
-        tiltMaxAngleX={10}
-        tiltMaxAngleY={10}
-        transitionSpeed={1500}
-        className="tilt-container"
-      >
+      <div className="about-container">
+
+        {/* BAGIAN KIRI - TEXT */}
         <div className="about-text" data-aos="fade-right">
           <h2 className="about-title">Tentang Saya</h2>
           <p className="about-description typed-text">{typedText}</p>
@@ -110,18 +97,8 @@ function About() {
             📄 Download CV
           </a>
         </div>
-      </Tilt>
 
-      {/* BAGIAN KANAN - LOGO */}
-      <Tilt
-        glareEnable={true}
-        glareMaxOpacity={0.3}
-        tiltMaxAngleX={15}
-        tiltMaxAngleY={15}
-        scale={1.05}
-        transitionSpeed={1500}
-        className="tilt-container"
-      >
+        {/* BAGIAN KANAN - LOGO */}
         <div className="about-logos" data-aos="fade-left">
           <h3 className="typed-tech-title">{typedTechTitle}</h3>
           <div className="tech-logos">
@@ -138,11 +115,8 @@ function About() {
             ))}
           </div>
         </div>
-      </Tilt>
-
-    </div>
-  </section>
-
+      </div>
+    </section>
   );
 }
 
